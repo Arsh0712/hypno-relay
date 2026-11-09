@@ -1,0 +1,20 @@
+[Unit]
+Description=HipnoType Relay - access-URL routing + tunnel service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=hipno-relay
+WorkingDirectory=/opt/hipno-relay
+Environment=RELAY_PUBLIC_ORIGIN=https://hipno-relay.mangocloud.cyou
+ExecStart=/usr/local/bin/bun /opt/hipno-relay/index.ts
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/opt/hipno-relay/data
+
+[Install]
+WantedBy=multi-user.target

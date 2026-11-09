@@ -1,0 +1,5 @@
+hipno-relay.mangocloud.cyou {
+    reverse_proxy 127.0.0.1:3005 {
+        flush_interval -1
+    }
+}

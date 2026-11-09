@@ -1,0 +1,13 @@
+{
+  "name": "hipno-relay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HipnoType Relay — access-URL routing and WebSocket tunnel service",
+  "scripts": {
+    "dev": "bun --hot index.ts",
+    "start": "bun index.ts"
+  },
+  "dependencies": {
+    "socket.io": "^4.8.4"
+  }
+}
